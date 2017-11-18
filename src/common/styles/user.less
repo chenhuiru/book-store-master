@@ -1,0 +1,411 @@
+
+//初始化设置
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.user {
+  background-color: @bgcolor;
+  position: relative;
+}
+
+//全局定义
+@bgcolor: rgba(224, 224, 224, 0.48);
+@color: #d83c00;
+@border: 0.8px solid rgba(44, 44, 44, 0.85);
+
+//主体设置开始
+.headPortrait-bg {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  background-image: url("../../assets/f3.png");
+  background-size: cover;
+  //filter: blur(3px);
+  opacity: 0.4;
+}
+
+.user > ul {
+  width: 100%;
+  height: 170px;
+  position: absolute;
+  top: 33px;
+  font: normal 16px '微软雅黑 Light';
+  color: @color;
+  .headPortrait {
+    width: 110px;
+    height: 110px;
+    border: 1px solid white;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: 20px;
+    img {
+      width: 120px;
+      height: 120px;
+    }
+  }
+  .landRegister {
+    position: relative;
+    top: -60px;
+    left: 40%;
+    span {
+      display: inline-block;
+      padding: 3px 10px;
+      border: 1px solid #f10215;
+      margin-left: 20px;
+      cursor: pointer;
+    }
+  }
+  .slogan {
+    position: relative;
+    top: -30px;
+    left: 20%;
+    font: normal 15px '微软雅黑 Light';
+    margin-top: 10px;
+  }
+  .user1{
+    position: relative;
+    top: -70px;
+    left: 40%;
+    width: 150px;
+    height: 25px;
+    padding: 5px 10px;
+    font: normal 20px '微软雅黑 Light';
+  }
+}
+
+.subject {
+  width: 100%;
+  border-top: @border;
+  border-bottom: @border;
+  position: absolute;
+  top: 200px;
+  font: normal 15px '微软雅黑 Light';
+  color: #818181;
+  .firstInformation > div, .secondInformation > div, .therdInformation > div {
+    position: relative;
+    border-bottom: @border;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    padding: 0 20px;
+    background-color: white;
+    //background: url("../../assets/f2.png") no-repeat;
+
+  }
+  .firstInformation {
+    border-top: @border;
+  }
+  .secondInformation, .therdInformation {
+    border-top: @border;
+    margin-top: 22px;
+  }
+  //图标设置
+  p {
+    margin-top: 12px;
+    position: absolute;
+    top: 0;
+    right: 15px;
+    width: 20px;
+    height: 20px;
+    background: url("../../assets/f2.png") no-repeat;
+    background-size: cover;
+  }
+  button{
+    width: 90%;
+    height: 50px;
+    background-color:green;
+   margin: 20px 5%;
+    font: normal 20px '微软雅黑 Light';
+    color: white;
+  }
+  button:hover{
+    background-color: darkgreen;
+  }
+}
+
+
+//注册页面设置
+.registerBox{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: calc(~'100% - 2.2rem');
+  background-color: white;
+  h1{
+    text-align: center;
+    width: 100%;
+    height: 50px;
+    padding-top: 10px;
+    background-color: #333333;
+    color: white;
+    font: normal 18px '微软雅黑 Light';
+    margin-bottom: 30px;
+  }
+  .userInformation{
+   width: 100%;
+    margin: 0 auto;
+    div{
+      width: 85%;
+      height: 50px;
+      margin: 10px auto;
+      border-bottom: 1px solid #6e6e6e;
+      text-align: left;
+      padding-bottom: 60px;
+      label{
+        font: normal 16px '微软雅黑 Light';
+        position: relative;
+        top: -2px;
+        img{
+          margin-left: 10px;
+          width: 20px;
+          height: 20px;
+          position: relative;
+          top: 8px;
+          margin-top: 15px;
+        }
+      }
+      p{
+        font: normal 14px '微软雅黑 Light';
+        color: red;
+        margin-left: 15%;
+        position: relative;
+        top: 20px;
+      }
+    }
+    .verificationCode{
+      width: 170px;
+    }
+    .verificationButtom{
+      margin-left: 20px;
+     background-color: #ababab;
+      padding: 5px 0;
+    }
+    input{
+      position: relative;
+      top: 5px;
+      width: 80%;
+      padding: 5px 10px;
+      font: normal 15px '微软雅黑 Light';
+      color: #5d5d5d;
+      border: none;
+      outline: medium;
+    }
+  }
+  button{
+    border: none;
+    width: 85%;
+    height: 50px;
+    margin: 30px auto;
+    background-color: green;
+    font: normal 18px '微软雅黑 Light';
+    color: white;
+    margin-left: 8%;
+  }
+  button:hover{
+    background-color: limegreen;
+  }
+}
+
+//登陆页面设置
+.landBox{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: calc(~'100% - 2.2rem');
+  background-color: white;
+  text-align: center;
+    h1{
+        width: 100%;
+        height: 50px;
+        padding-top: 10px;
+        background-color: #333333;
+        color: white;
+        font: normal 18px '微软雅黑 Light';
+        margin-bottom: 30px;
+      }
+  div{
+    width: 85%;
+    height: 50px;
+    margin: 0 auto;
+    border-bottom: 1px solid #6e6e6e;
+    text-align: left;
+    padding-bottom: 60px;
+    label{
+      font: normal 16px '微软雅黑 Light';
+      position: relative;
+      top: 1px;
+      img{
+        margin-left: 10px;
+        width: 20px;
+        height: 20px;
+        position: relative;
+        top: 8px;
+        margin-top: 15px;
+      }
+    }
+    input{
+      position: relative;
+      top: 5px;
+      width: 80%;
+      padding: 0 10px;
+      font: normal 15px '微软雅黑 Light';
+      color: #5d5d5d;
+       border: none;
+       outline: medium;
+    }
+  }
+  .londButton{
+    border: none;
+    width: 85%;
+    height: 50px;
+    margin: 30px auto;
+    background-color:green;
+    font: normal 18px '微软雅黑 Light';
+    color: white;
+  }
+}
+
+//个人资料设置
+.personalData{
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  background-color: white;
+  height: calc(~'100% - 2.2rem');
+  h1{
+    text-align: center;
+    width: 100%;
+    height: 50px;
+    padding-top: 10px;
+    background-color: #333333;
+    color: white;
+    font: normal 18px '微软雅黑 Light';
+  }
+  div{
+    line-height: 50px;
+    width: 85%;
+    height: 50px;
+    margin: 0 auto;
+    border-bottom: 1px solid #6e6e6e;
+    text-align: left;
+    input{
+
+      width: 75%;
+      padding: 0 10px;
+      font: normal 15px '微软雅黑 Light';
+      color: #5d5d5d;
+      border: none;
+      outline: medium;
+    }
+    .gender,.man,.woman{
+      padding: 5px 10px;
+    }
+    .fyb{
+      background-color: lime;
+    }
+  }
+.jieshao{
+  border-bottom: none;
+  border-bottom: 1px solid #6e6e6e;
+}
+  .jieshao>input{
+    position: relative;
+    top:-12px;
+    font: normal 16px '微软雅黑 Light';
+    color: #939393;
+    margin-top: 15px;
+    width: 350px;
+    height: 100px;
+   border: 1px solid #8b8b8b;
+    border-top: none;
+    padding: 10px 15px;
+  }
+  button{
+    position: relative;
+    top:45px;
+    border: none;
+    width: 85%;
+    height: 50px;
+    margin: 100px auto;
+    background-color: green;
+    font: normal 18px '微软雅黑 Light';
+    color: white;
+    margin-left: 8%;
+  }
+}
+
+.promp{
+  position: absolute;
+  width: 70%;
+  height: 80px;
+ background-color: white;
+  border: 1px solid #ababab;
+  margin-left: 13%;
+  text-align: center;
+  padding-top: 25px;
+  font: normal 1px '微软雅黑 Light';
+}
+
+.mask{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(68, 68, 68, 0.64);
+}
+.addressAdd{
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  background-color: white;
+  height: calc(~'100% - 2.2rem');
+  h1{
+    text-align: center;
+    width: 100%;
+    height: 50px;
+    padding-top: 10px;
+    background-color: #333333;
+    color: white;
+    font: normal 18px '微软雅黑 Light';  }
+  div{
+    line-height: 50px;
+    width: 85%;
+    height: 50px;
+    margin: 0 auto;
+    border-bottom: 1px solid #6e6e6e;
+    text-align: left;
+    padding-bottom: 60px;
+    input{
+      position: relative;
+      top: 5px;
+      width: 70%;
+      padding: 0 10px;
+      font: normal 15px '微软雅黑 Light';
+      color: #5d5d5d;
+      border: none;
+      outline: medium;
+    }
+    label{
+      font: normal 16px '微软雅黑 Light';
+      position: relative;
+      top: 1px;
+    }
+  }
+  button{
+    position: relative;
+    left: 7%;
+    border: none;
+    width: 85%;
+    height: 50px;
+    margin: 30px auto;
+    background-color:green;
+    font: normal 18px '微软雅黑 Light';
+    color: white;
+  }
+}
